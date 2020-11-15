@@ -1,0 +1,36 @@
+﻿@{
+	ViewBag.Title = "Register";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<form action ="/student/save">
+<h2>Register</h2><br>
+ <label>Lastname:</label>
+ <input type="text" name="lastname" class="form-control" required>
+ 
+  <label>Firstname:</label>
+ <input type="text" name="firstname" class="form-control"required>
+ 
+ <label>Birthdate:</label>
+ <input type="date" name="bday"class="form-control"required>
+ 
+ <label>Gender:</label>
+ <input type="radio" value="M" name="gender" required>Male
+  <input type="radio" value="F" name="gender" required>Female<br>
+  
+  <label>Course: </label>
+  <select name="course"class="form-control">
+  <option value="BSIT">BSIT</option>
+  <option value="HRM">HRM</option>
+  <option value="BSN">BSN</option>
+  <option value="BSBA">BSBA</option>
+</select><br><br>
+ 
+ <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+ 
+ </form>
+ 
+ 
+

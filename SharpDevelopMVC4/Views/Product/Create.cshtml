@@ -1,0 +1,29 @@
+﻿@{
+	ViewBag.Title = "Create";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ADD CLINIC</h2>
+
+<form action="/product/create" method="post">
+   
+	<div class="form-group">
+	    <label  >Name</label>
+	    <input type="text" name="Name" class="form-control input-md" required>
+  	</div>
+	<div class="form-group">
+	    <label >Location</label>
+	    <input type="text" name="Location" class="form-control input-md" required>
+  	</div>
+		
+		
+				<!-- File Upload -->
+            <div class="form-group">
+                <label  for="UnitPrice">Upload Picture</label>
+                <div class="form-group">
+                    <input type="file" accept="image/*" id="fileUpload" name="fileUpload" class="form-control input-md">
+                </div>
+            </div>
+		
+  	<button type="submit" class="btn btn-primary">Submit</button>
+</form>

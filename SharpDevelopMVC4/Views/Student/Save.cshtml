@@ -1,0 +1,16 @@
+﻿@{
+	ViewBag.Title = "Save";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form action ="/student/registered">
+
+<h2 class="text-center">Check Info</h2><br>
+<label>FullName:</label>
+<input type="text" name="lastname",name="firstname"  value="@ViewBag.Lastname, @ViewBag.Firstname"/ style="background-color:gray; border:none;"><br><br>
+Gender : @ViewBag.Gender <br><br> 
+Course : @ViewBag.Course <br><br>
+BirthDate: @ViewBag.BirthDate<br><br>
+
+<button type="submit" class="btn btn-primary btn-lg" > Save </button>
+</form>

@@ -1,0 +1,33 @@
+﻿@model List<SharpDevelopMVC4.Models.Category>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Categories</h2>
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        
+         
+      </tr>
+    </thead>
+    <tbody>
+
+	@foreach(var p in Model)
+	{
+	    <tr>
+        <td>@p.Name -</td>
+        <td> @p.Description </td>
+     
+ 
+      </tr>
+	}
+    
+    
+     </tbody>
+  </table>>

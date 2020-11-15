@@ -1,0 +1,94 @@
+﻿@model List<SharpDevelopMVC4.Models.Product>
+@{
+	ViewBag.Title = "Add";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	
+	var Products = ViewBag.Products;
+}
+
+
+<div class="card-header">
+<h2>View Records</h2>
+</div><br><br>
+
+<form action="/product/searchvet">
+
+   
+   <div class="container">
+   
+   <div class="row">
+   
+   <div class="col-md-xl">
+   <input type="text" class="form-control" name="key" placeholder="Search"/>
+   </div>
+   
+   <div class="col-md-xl"> 
+   <button type="submit" class="btn btn-primary" style="margin-left:1px">Search</button>
+   </div>
+   
+   <div class="col-md-xl">
+    <select  name="priceSort" class="form-control" style="margin-left:5px"> 
+		<option>Sort By</option>
+		<option value="low" >price low to high</option>
+		<option value="high">price high to low</option>	
+	</select>
+   </div>
+   
+   <div class="col-md-xl">
+    <button type="submit" class="btn btn-primary"  style="margin-left:5px">SortNow</button>
+   </div>
+   
+   <div class="col-md-xl">
+    <small><a href="/product/create"  class="btn btn-success " style="margin-left:20px" >+ Create New</a></small>
+   </div>
+  
+   </div>
+   </div>
+	
+	
+</form>
+
+
+<table class="table table-bordered">
+    <thead>
+      <tr>
+         <th>Id</th>
+        
+        <th>Name</th>
+        <th>Location</th>
+      
+    
+       
+         <th></th>
+         
+      </tr>
+    </thead>
+    
+   <tbody>
+
+	@foreach(var p in Model)
+	{
+	    <tr>
+	     <td>@p.Id</td>
+       
+        <td>@p.Name</td>
+         <td> @p.Location </td>
+         
+        <td>
+       <a href="/product/delete?Id=@p.Id" 
+        onclick="return confirm('Are you sure to delete this Item')" class="btn btn-danger btn-sm" style="margin-left:60px">DELETE</a>
+      <a href="/product/edit?Id=@p.Id" class="btn btn-primary btn-sm" style="margin-left:5px">EDIT</a></td>
+      
+    </tr>
+     
+	}
+    
+    
+     </tbody>
+  </table>
+  
+  
+   <br><br>
+   <marquee>PRODUCT INVENTORY CRUD</marquee>
+   
+  
